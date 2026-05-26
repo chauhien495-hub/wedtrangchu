@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Trang Chủ</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background: linear-gradient(135deg, #40165c, #cdc9d3);
+        }
+
+        .container{
+            width: 90%;
+            max-width: 900px;
+            text-align: center;
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            padding: 50px;
+            border-radius: 25px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        h1{
+            color: white;
+            margin-bottom: 15px;
+            font-size: 45px;
+        }
+
+        p{
+            color: white;
+            margin-bottom: 40px;
+            font-size: 18px;
+        }
+
+        .menu{
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .btn{
+            text-decoration: none;
+            color: white;
+            background: rgba(255,255,255,0.2);
+            padding: 18px 35px;
+            border-radius: 15px;
+            font-size: 20px;
+            font-weight: bold;
+            transition: 0.3s;
+            border: 2px solid white;
+        }
+
+        .btn:hover{
+            background: white;
+            color: #3d12a1;
+            transform: translateY(-5px);
+        }
+
+        footer{
+            margin-top: 40px;
+            color: rgb(67, 29, 136);
+            font-size: 15px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>TRANG CHỦ</h1>
+
+        <p>
+            Chào mừng đến với website cá nhân của tôi
+        </p>
+
+        <div class="menu">
+
+            <a class="btn" href="gioithieu.html">
+               Giới Thiệu
+            </a>
+
+           <a class="btn" href="tho.html">
+               Bài Thơ
+            </a>
+
+            <a class="btn"
+               href="http://PhanDucHoang.infinityfreeapp.com"
+               target="_blank">
+               Âm Nhạc
+            </a>
+
+        </div>
+
+        <footer>
+            
+        </footer>
+
+    </div>
+
+</body>
+</html>
