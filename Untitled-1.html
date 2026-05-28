@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Thế Giới Di Động</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f3f4f6;
+    color:#222;
+}
+
+/* ================= HEADER ================= */
+
+.top-header{
+    background:#ffd500;
+    padding:12px 5%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 4px 15px rgba(0,0,0,0.1);
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:28px;
+    font-weight:800;
+    color:#000;
+}
+
+.logo i{
+    font-size:32px;
+}
+
+.search-box{
+    width:40%;
+    position:relative;
+}
+
+.search-box input{
+    width:100%;
+    padding:14px 20px;
+    border:none;
+    border-radius:40px;
+    outline:none;
+    font-size:15px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.08);
+}
+
+.search-box i{
+    position:absolute;
+    right:20px;
+    top:50%;
+    transform:translateY(-50%);
+    color:#777;
+}
+
+.header-icons{
+    display:flex;
+    gap:25px;
+}
+
+.header-icons div{
+    cursor:pointer;
+    font-size:22px;
+    transition:0.3s;
+}
+
+.header-icons div:hover{
+    transform:scale(1.1);
+    color:#fff;
+}
+
+/* ================= MENU ================= */
+
+.menu{
+    background:#111827;
+    padding:15px 5%;
+    display:flex;
+    gap:35px;
+    overflow:auto;
+}
+
+.menu a{
+    color:#fff;
+    text-decoration:none;
+    font-weight:500;
+    white-space:nowrap;
+    transition:0.3s;
+}
+
+.menu a:hover{
+    color:#ffd500;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    margin:25px 5%;
+    height:500px;
+    border-radius:30px;
+    overflow:hidden;
+    position:relative;
+    background:
+    linear-gradient(to right,
+    rgba(0,0,0,0.8),
+    rgba(0,0,0,0.2)),
+    url('https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=1600&auto=format&fit=crop')
+    center/cover;
+    
+    display:flex;
+    align-items:center;
+    padding:60px;
+}
+
+.hero-content{
+    color:#fff;
+    max-width:600px;
+}
+
+.hero-content h1{
+    font-size:60px;
+    line-height:1.2;
+    margin-bottom:20px;
+}
+
+.hero-content p{
+    font-size:18px;
+    margin-bottom:30px;
+    color:#ddd;
+}
+
+.hero-btn{
+    padding:16px 35px;
+    border:none;
+    border-radius:50px;
+    background:#ffd500;
+    color:#000;
+    font-size:17px;
+    font-weight:700;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.hero-btn:hover{
+    background:#fff;
+    transform:translateY(-5px);
+}
+
+/* ================= FEATURES ================= */
+
+.features{
+    padding:20px 5%;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.feature-box{
+    background:#fff;
+    padding:25px;
+    border-radius:20px;
+    display:flex;
+    align-items:center;
+    gap:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.06);
+    transition:0.3s;
+}
+
+.feature-box:hover{
+    transform:translateY(-5px);
+}
+
+.feature-box i{
+    font-size:35px;
+    color:#ffd500;
+}
+
+.feature-box h3{
+    font-size:18px;
+}
+
+/* ================= PRODUCTS ================= */
+
+.products{
+    padding:60px 5%;
+}
+
+.section-title{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:35px;
+}
+
+.section-title h2{
+    font-size:36px;
+}
+
+.section-title a{
+    text-decoration:none;
+    color:#111827;
+    font-weight:600;
+}
+
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:#fff;
+    border-radius:25px;
+    overflow:hidden;
+    position:relative;
+    transition:0.4s;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.sale{
+    position:absolute;
+    top:15px;
+    left:15px;
+    background:red;
+    color:#fff;
+    padding:6px 12px;
+    border-radius:30px;
+    font-size:13px;
+    font-weight:600;
+}
+
+.card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:20px;
+}
+
+.card-content h3{
+    margin-bottom:10px;
+    font-size:20px;
+}
+
+.rating{
+    color:orange;
+    margin-bottom:10px;
+}
+
+.price{
+    display:flex;
+    gap:10px;
+    align-items:center;
+    margin-bottom:18px;
+}
+
+.new-price{
+    color:red;
+    font-size:24px;
+    font-weight:700;
+}
+
+.old-price{
+    text-decoration:line-through;
+    color:#999;
+}
+
+.buy-btn{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:14px;
+    background:#ffd500;
+    font-size:16px;
+    font-weight:700;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.buy-btn:hover{
+    background:#111827;
+    color:#fff;
+}
+
+/* ================= BANNER ================= */
+
+.discount-banner{
+    margin:20px 5%;
+    background:linear-gradient(135deg,#111827,#1f2937);
+    border-radius:30px;
+    padding:50px;
+    color:#fff;
+    text-align:center;
+}
+
+.discount-banner h2{
+    font-size:45px;
+    margin-bottom:15px;
+}
+
+.discount-banner p{
+    color:#ddd;
+    margin-bottom:25px;
+}
+
+.discount-banner button{
+    padding:15px 35px;
+    border:none;
+    border-radius:40px;
+    background:#ffd500;
+    font-size:16px;
+    font-weight:700;
+    cursor:pointer;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:#111827;
+    color:#fff;
+    margin-top:60px;
+    padding:60px 5% 30px;
+}
+
+.footer-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:40px;
+}
+
+.footer-box h3{
+    margin-bottom:20px;
+    font-size:22px;
+}
+
+.footer-box p,
+.footer-box a{
+    color:#ccc;
+    text-decoration:none;
+    line-height:2;
+}
+
+.socials{
+    margin-top:15px;
+    display:flex;
+    gap:15px;
+}
+
+.socials i{
+    font-size:24px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.socials i:hover{
+    color:#ffd500;
+}
+
+.copyright{
+    text-align:center;
+    margin-top:40px;
+    color:#aaa;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:1000px){
+
+    .top-header{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .search-box{
+        width:100%;
+    }
+
+    .hero{
+        height:auto;
+        padding:40px;
+    }
+
+    .hero-content h1{
+        font-size:42px;
+    }
+}
+
+@media(max-width:600px){
+
+    .hero-content h1{
+        font-size:32px;
+    }
+
+    .section-title h2{
+        font-size:28px;
+    }
+
+    .discount-banner h2{
+        font-size:30px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header class="top-header">
+
+    <div class="logo">
+        <i class="fa-solid fa-mobile-screen"></i>
+        <span>Thế Giới Di Động</span>
+    </div>
+
+    <div class="search-box">
+        <input type="text" placeholder="Bạn tìm gì hôm nay...">
+        <i class="fa-solid fa-magnifying-glass"></i>
+    </div>
+
+    <div class="header-icons">
+        <div><i class="fa-solid fa-cart-shopping"></i></div>
+        <div><i class="fa-solid fa-user"></i></div>
+        <div><i class="fa-solid fa-heart"></i></div>
+    </div>
+
+</header>
+
+<!-- MENU -->
+
+<nav class="menu">
+    <a href="#">Điện thoại</a>
+    <a href="#">Laptop</a>
+    <a href="#">Apple</a>
+    <a href="#">Samsung</a>
+    <a href="#">Tablet</a>
+    <a href="#">Phụ kiện</a>
+    <a href="#">Smart Watch</a>
+    <a href="#">Khuyến mãi</a>
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="hero-content">
+        <h1>Công nghệ hiện đại cho cuộc sống thông minh</h1>
+
+        <p>
+            Khám phá hàng ngàn sản phẩm công nghệ mới nhất
+            với giá ưu đãi cực sốc.
+        </p>
+
+        <button class="hero-btn">Mua Ngay</button>
+    </div>
+
+</section>
+
+<!-- FEATURES -->
+
+<section class="features">
+
+    <div class="feature-box">
+        <i class="fa-solid fa-truck-fast"></i>
+        <div>
+            <h3>Giao hàng nhanh</h3>
+            <p>Toàn quốc 24h</p>
+        </div>
+    </div>
+
+    <div class="feature-box">
+        <i class="fa-solid fa-shield"></i>
+        <div>
+            <h3>Bảo hành chính hãng</h3>
+            <p>12 tháng</p>
+        </div>
+    </div>
+
+    <div class="feature-box">
+        <i class="fa-solid fa-credit-card"></i>
+        <div>
+            <h3>Thanh toán dễ dàng</h3>
+            <p>Hỗ trợ mọi hình thức</p>
+        </div>
+    </div>
+
+    <div class="feature-box">
+        <i class="fa-solid fa-headset"></i>
+        <div>
+            <h3>Hỗ trợ 24/7</h3>
+            <p>Tư vấn miễn phí</p>
+        </div>
+    </div>
+
+</section>
+
+<!-- PRODUCTS -->
+
+<section class="products">
+
+    <div class="section-title">
+        <h2>Sản phẩm nổi bật</h2>
+        <a href="#">Xem tất cả</a>
+    </div>
+
+    <div class="product-grid">
+
+        <!-- PRODUCT 1 -->
+
+        <div class="card">
+
+            <div class="sale">-15%</div>
+
+            <img src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?q=80&w=1200&auto=format&fit=crop">
+
+            <div class="card-content">
+
+                <h3>iPhone 15 Pro Max</h3>
+
+                <div class="rating">
+                    ⭐⭐⭐⭐⭐
+                </div>
+
+                <div class="price">
+                    <div class="new-price">32.990.000đ</div>
+                    <div class="old-price">36.990.000đ</div>
+                </div>
+
+                <button class="buy-btn">
+                    Mua ngay
+                </button>
+
+            </div>
+        </div>
+
+        <!-- PRODUCT 2 -->
+
+        <div class="card">
+
+            <div class="sale">-20%</div>
+
+            <img src="https://images.unsplash.com/photo-1517336714739-489689fd1ca8?q=80&w=1200&auto=format&fit=crop">
+
+            <div class="card-content">
+
+                <h3>MacBook Air M3</h3>
+
+                <div class="rating">
+                    ⭐⭐⭐⭐⭐
+                </div>
+
+                <div class="price">
+                    <div class="new-price">28.990.000đ</div>
+                    <div class="old-price">34.990.000đ</div>
+                </div>
+
+                <button class="buy-btn">
+                    Mua ngay
+                </button>
+
+            </div>
+        </div>
+
+        <!-- PRODUCT 3 -->
+
+        <div class="card">
+
+            <div class="sale">-10%</div>
+
+            <img src="https://images.unsplash.com/photo-1580910051074-3eb694886505?q=80&w=1200&auto=format&fit=crop">
+
+            <div class="card-content">
+
+                <h3>Samsung Galaxy S24</h3>
+
+                <div class="rating">
+                    ⭐⭐⭐⭐⭐
+                </div>
+
+                <div class="price">
+                    <div class="new-price">24.490.000đ</div>
+                    <div class="old-price">27.990.000đ</div>
+                </div>
+
+                <button class="buy-btn">
+                    Mua ngay
+                </button>
+
+            </div>
+        </div>
+
+        <!-- PRODUCT 4 -->
+
+        <div class="card">
+
+            <div class="sale">-30%</div>
+
+            <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?q=80&w=1200&auto=format&fit=crop">
+
+            <div class="card-content">
+
+                <h3>Apple Watch</h3>
+
+                <div class="rating">
+                    ⭐⭐⭐⭐⭐
+                </div>
+
+                <div class="price">
+                    <div class="new-price">9.990.000đ</div>
+                    <div class="old-price">13.990.000đ</div>
+                </div>
+
+                <button class="buy-btn">
+                    Mua ngay
+                </button>
+
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- DISCOUNT -->
+
+<section class="discount-banner">
+
+    <h2>SIÊU SALE CUỐI TUẦN</h2>
+
+    <p>
+        Giảm giá đến 50% cho hàng ngàn sản phẩm công nghệ.
+    </p>
+
+    <button>Mua ngay</button>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="footer-container">
+
+        <div class="footer-box">
+
+            <h3>Thế Giới Di Động</h3>
+
+            <p>
+                Hệ thống bán lẻ điện thoại, laptop,
+                phụ kiện hàng đầu Việt Nam.
+            </p>
+
+        </div>
+
+        <div class="footer-box">
+
+            <h3>Liên kết</h3>
+
+            <a href="#">Trang chủ</a><br>
+            <a href="#">Sản phẩm</a><br>
+            <a href="#">Khuyến mãi</a><br>
+            <a href="#">Liên hệ</a>
+
+        </div>
+
+        <div class="footer-box">
+
+            <h3>Liên hệ</h3>
+
+            <p>Email: contact@gmail.com</p>
+            <p>Hotline: 1900 9999</p>
+            <p>TP.HCM, Việt Nam</p>
+
+        </div>
+
+        <div class="footer-box">
+
+            <h3>Mạng xã hội</h3>
+
+            <div class="socials">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-youtube"></i>
+                <i class="fa-brands fa-tiktok"></i>
+                <i class="fa-brands fa-instagram"></i>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="copyright">
+        © 2026 Thế Giới Di Động Clone | Design by IT Student
+    </div>
+
+</footer>
+
+</body>
+</html> 
